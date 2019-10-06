@@ -5,7 +5,7 @@ const express =require('express')
 const hbs=require('hbs')
 
 const app=express()
-
+const port=process.env.PORT || 3000
 //define paths to config express
 const viewsPath=path.join(__dirname,'../templates/views')
 const publicPath=path.join(__dirname,'../public')
@@ -89,7 +89,7 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is up on port 3000')
 })
 
