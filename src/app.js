@@ -34,7 +34,7 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/help',(req,res)=>{
-    res.render('Help',{
+    res.render('help',{
         title:'Help',
         name:'Sanket Patel'
     })
@@ -74,13 +74,13 @@ geocode1.geocode(address,(error,data)=>{
     
 })
 
-// app.get('/help/*',(req,res)=>{
-//     res.render('error',{
-//         title:'I am here to help you',
-//         error:'help content not found',
-//         name:'Sanket Patel'
-//     })
-// })
+app.get('/help/*',(req,res)=>{
+    res.render('error',{
+        title:'I am here to help you',
+        error:'help content not found',
+        name:'Sanket Patel'
+    })
+})
 app.get('*',(req,res)=>{
     res.render('error',{
         error:'404 Page Not Found'
