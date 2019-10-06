@@ -31,7 +31,7 @@ const Weather=(latitude,longitude,callback)=>{
         }
         else{
 
-            callback(undefined,response.body.daily.data[0].summary+'In '+response.body.timezone+' Temperature is '+response.body.currently.temperature+'. There is '+response.body.currently.precipProbability+'% of rain')
+            callback(undefined,response.body.daily.data[0].summary+'Currently the temperature is '+ response.body.currently.temperature+' degrees. There is '+response.body.currently.precipProbability+'% chance of rain.\n Maximum temperature of the day is '+response.body.daily.data[0].temperatureHigh+' and Minimum temperature is '+response.body.daily.data[0].temperatureLow+'.')
         }
         
     })
